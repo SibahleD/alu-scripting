@@ -12,7 +12,7 @@ def top_ten(sub):
         print(None)
     posts = response.json()['data']['children']
     for post in posts:
-        print(post['data']['title']) 
+        print(post['data']['title'])
     posts = response.json().get("data", {}).get("children", [])
     for item in posts:
         print(item.get("data", {}).get("title", None))

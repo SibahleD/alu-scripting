@@ -14,7 +14,6 @@ def number_of_subscribers(sub):
         return 0
     json_response = response.json
     try:
-        return json_response['data']['children'][0]['data']['subreddit_subscribers']
+        return json_response['data']['subscribers']
     except (KeyError, IndexError):
         return 0
-    
