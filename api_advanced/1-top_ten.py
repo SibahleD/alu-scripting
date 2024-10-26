@@ -8,11 +8,12 @@ def top_ten(subreddit):
         headers = {"User-Agent": "subreddit-hot-posts-fetcher"}
         response = requests.get("https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit), headers=headers, allow_redirects=False)
         if response.status_code != 200:
-            return None
+            print(None)
+            return
         json_response = response.json()
         try:
             posts = json_response['data']['children']
             for post in posts:
-                return (post['data']['title'])
+                print(post['data']['title'])
         except (KeyError, IndexError):
-            return None
+            print(None)

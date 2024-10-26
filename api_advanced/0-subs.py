@@ -17,3 +17,4 @@ def number_of_subscribers(sub):
         return json_response['data']['children'][0]['data']['subreddit_subscribers']
     except (KeyError, IndexError):
         return 0
+    
