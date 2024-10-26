@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Finding Number of subscribers in a given subbreddit
+Finding Number of subscribers in a given subreddit
 """
 import requests
 
@@ -14,6 +14,7 @@ headers = {
 
 
 def number_of_subscribers(subreddit):
+    """Finding Number of subscribers in a given subreddit"""
     response = requests.get(f'https://www.reddit.com/r/{subreddit}.json', headers=headers)
     json_response = response.json
     print(json_response['data']['subscribers'])
