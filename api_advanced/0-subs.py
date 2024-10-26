@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Finding Number of subscribers in a given subreddit
-"""
+"""Finding Number of subscribers in a given subreddit"""
 
 import requests
 
