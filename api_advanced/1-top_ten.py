@@ -4,9 +4,9 @@
 import requests
 
 
-def top_ten(subreddit):
+def top_ten(sub):
         headers = {"User-Agent": "subreddit-hot-posts-fetcher"}
-        response = requests.get("https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit), headers=headers, allow_redirects=False)
+        response = requests.get("https://www.reddit.com/r/{}/hot.json?limit=10".format(sub), headers=headers, allow_redirects=False)
         if response.status_code != 200:
             print(None)
             return
