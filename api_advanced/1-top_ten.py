@@ -9,7 +9,6 @@ def top_ten(sub):
         response = requests.get("https://www.reddit.com/r/{}/hot.json?limit=10".format(sub), headers=headers, allow_redirects=False)
         if response.status_code != 200:
             print(None)
-            return
         json_response = response.json()
         try:
             posts = json_response['data']['children']
